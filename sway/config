@@ -1,0 +1,40 @@
+set $mod Mod1
+set $left h
+set $down j
+set $up k
+set $right l
+
+set $term kitty
+
+# gaps outer 5
+# gaps inner 7
+
+# default_border pixel 2
+default_floating_border normal
+# set $menu dmenu_path | wofi --show drun -I | xargs swaymsg exec --
+set $menu exec $term --class=launcher -e sway-launcher-desktop.sh
+
+font pango:SourceCodePro Medium 10
+
+exec mako
+exec gammastep -l 53.9:27.56 -O 5000
+
+bar {
+	swaybar_command waybar
+}
+
+
+
+
+
+output "*" background "~/.config/sway/wallpaper" fill
+
+include /etc/sway/config.d/*
+# include /home/eug1n1/.config/sway/devices.conf
+# include /home/eug1n1/.config/sway/keybinds.conf
+# include /home/eug1n1/.config/sway/mods.conf
+# include /home/eug1n1/.config/sway/theme.conf
+# include /home/eug1n1/.config/sway/apps.conf
+include /home/eug1n1/.config/sway/config.d/*
+
+include ~/.config/sway/themes/gruvbox
