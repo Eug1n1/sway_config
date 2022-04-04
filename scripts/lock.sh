@@ -12,4 +12,5 @@ convert /tmp/screen.png -scale 25% -blur 0x4 -scale 400% -fill black -colorize 5
 }
 
 convert $IMAGE $TEXT -gravity center -geometry +0+200 -composite $IMAGE
+playerctl -a pause
 swaylock -s fill -i /tmp/screen.png
