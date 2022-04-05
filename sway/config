@@ -6,12 +6,10 @@ set $right l
 
 set $term kitty
 
-# gaps outer 5
-# gaps inner 7
+xwayland disabled
 
-# default_border pixel 2
 default_floating_border normal
-# set $menu dmenu_path | wofi --show drun -I | xargs swaymsg exec --
+
 set $menu exec $term --class=launcher -e sway-launcher-desktop.sh
 
 font pango:SourceCodePro Medium 10
