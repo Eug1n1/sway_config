@@ -53,7 +53,7 @@
 
     "network": {
         "format-wifi": "WIFI {essid}",
-        "format-ethernet": "{ifname}",
+        "format-ethernet": "INET {ifname}",
         "format-disconnected": "NO INTERNET",
         "on-click": "nm-connection-editor"
     },
