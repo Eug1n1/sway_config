@@ -1,0 +1,76 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 15,
+    "modules-left": ["sway/mode", "sway/workspaces", "sway/window"],
+    "modules-center": ["clock"],
+    "modules-right": [ "tray", "sway/language", "pulseaudio", "backlight", "network", "battery"],
+
+     "sway/language": {
+        "format": "{short}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+        "on-click-right": "swaymsg input type:keyboard xkb_switch_layout prev",
+    },   
+
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    "sway/window": {
+        "max-length": 50,
+    },
+
+    "backlight": {
+        "format": "{icon}",
+        "format-icons": ["", "", ""],
+        "on-scroll-up": "brightnessctl set 5+",
+        "on-scroll-down": "brightnessctl set 5-",
+    },
+
+    "sway/mode": {
+        "format": "{}"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+
+    "clock": {
+        "format-alt": "{:%a, %b %d %Y}",
+        "format": "{:%a, %b %d %I:%M %p}"
+    },
+
+    "battery": {
+        "bat": "BAT0",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}% ",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "睊",
+        "on-click": "kitty --class=nmtui -e nmtui"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-bluetooth": "{desc} {icon}",
+        "format-muted": "婢",
+        "format-icons": {
+            "default": ["", "", "墳", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute 0 toggle"
+    },
+}
