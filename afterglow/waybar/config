@@ -8,7 +8,7 @@
 
     "custom/power": {
         "format": "",
-        "on-click": "powermenu.py"
+        "on-click": "waylogout"
     },
 
     "sway/language": {
