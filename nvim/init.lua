@@ -26,6 +26,9 @@ require 'configs.lualine'
 require 'configs.treesitter'
 require 'configs.cmp'
 require 'configs.colorscheme'
+require 'configs.autopairs'
+require 'configs.nvim-tree'
+require 'configs.keymaps'
 
 local map = vim.api.nvim_set_keymap
 
