@@ -1,0 +1,12 @@
+on-button-left=dismiss
+on-button-right=invoke-default-action
+
+font=JetBrainsMonoNerdFont 12
+
+margin=20
+
+background-color=#1c1c1c
+text-color=#c9c9c9
+border-color=#828282
+
+
