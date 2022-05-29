@@ -52,6 +52,7 @@ return packer.startup(function(use)
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
   }
+  use "phaazon/hop.nvim"
 
   use {"ntk148v/komau.vim"} -- Packer
   use "igemnace/highlight.vim"

@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/comp/.local/share/nvim/site/pack/packer/start/highlight.vim",
     url = "https://github.com/igemnace/highlight.vim"
   },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/home/comp/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
+  },
   ["komau.vim"] = {
     loaded = true,
     path = "/home/comp/.local/share/nvim/site/pack/packer/start/komau.vim",

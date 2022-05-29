@@ -1,26 +1,5 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
-
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
   return
@@ -43,6 +22,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 nvim_tree.setup {
+
   disable_netrw = true,
   hijack_netrw = true,
   open_on_setup = false,
@@ -103,7 +83,7 @@ nvim_tree.setup {
   },
   actions = {
     open_file = {
-      quit_on_open = false,
+      quit_on_open = true,
       window_picker = {
             enable = false,
       },
