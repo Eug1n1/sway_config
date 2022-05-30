@@ -53,6 +53,7 @@ return packer.startup(function(use)
     },
   }
   use "phaazon/hop.nvim"
+  use "mfussenegger/nvim-ts-hint-textobject"
 
   use {"ntk148v/komau.vim"} -- Packer
   use "igemnace/highlight.vim"

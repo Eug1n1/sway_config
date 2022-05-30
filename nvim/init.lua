@@ -30,6 +30,7 @@ require 'configs.autopairs'
 require 'configs.nvim-tree'
 require 'configs.keymaps'
 require 'configs.hop'
+require 'configs.nvim-treehopper'
 
 local map = vim.api.nvim_set_keymap
 

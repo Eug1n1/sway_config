@@ -169,6 +169,11 @@ _G.packer_plugins = {
     path = "/home/comp/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
+  ["nvim-ts-hint-textobject"] = {
+    loaded = true,
+    path = "/home/comp/.local/share/nvim/site/pack/packer/start/nvim-ts-hint-textobject",
+    url = "https://github.com/mfussenegger/nvim-ts-hint-textobject"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/comp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",

@@ -18,6 +18,9 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+keymap("n", "hl", ":HopLineStart<CR>", opts)
+keymap("n", "h/", ":HopPattern<CR>", opts)
+
 keymap("n", "nt", ":NvimTreeToggle<CR>", opts)
 -- Normal --
 -- Better window navigation
