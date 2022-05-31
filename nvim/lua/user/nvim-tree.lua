@@ -56,7 +56,7 @@ nvim_tree.setup {
     custom = {},
   },
   git = {
-    enable = true,
+    enable = false,
     ignore = true,
     timeout = 500,
   },
@@ -82,7 +82,7 @@ nvim_tree.setup {
   },
   actions = {
     open_file = {
-      quit_on_open = true,
+      quit_on_open = false,
       window_picker = {
             enable = false,
       },

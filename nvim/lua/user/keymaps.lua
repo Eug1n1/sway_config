@@ -19,7 +19,10 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
-
+-- Hop
+keymap("n", "<leader>w", "<cmd>lua require'hop'.hint_words()<cr>", opts)
+keymap("n", "<leader>l", "<cmd>lua require'hop'.hint_lines_skip_whitespace()<cr>", opts)
+keymap("n", "<leader>c", "<cmd>lua require'hop'.hint_char1()<cr>", opts)
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
