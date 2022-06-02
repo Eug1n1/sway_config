@@ -5,11 +5,48 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua", "clangd", "pylsp", "rust_analyzer", "tailwindcss" }
+local servers = { "tsserver", "sumneko_lua", "clangd", "pylsp", "rust_analyzer", "denols" }
+
+-- local capability = require("user.lsp.handlers").capabilities
+-- local on_attach = require("user.lsp.handlers").on_attach
 
 lsp_installer.setup {
 	ensure_installed = servers
 }
+
+-- lspconfig.pylsp.setup{
+--     capabilities = capability,
+--     on_attach = on_attach,
+-- }
+--
+-- lspconfig.clangd.setup{
+--     capabilities = capability,
+--     on_attach = on_attach
+-- }
+--
+-- lspconfig.sumneko_lua.setup{
+--     capabilities = capability,
+--     on_attach = on_attach
+-- }
+--
+-- lspconfig.denols.setup {
+--   on_attach = on_attach,
+--   root_dir = lspconfig.util.root_pattern("deno.json"),
+--   init_options = {
+--     lint = true,
+--   },
+-- }
+--
+-- lspconfig.tsserver.setup{
+--     on_attach = on_attach,
+--     root_dir = lspconfig.util.root_pattern("package.json"),
+--     init_options = {
+--         lint = true,
+--     },
+-- }
+--
+-- local i, j = pcall(require, "user.lsp.settings.denols")
+-- print(j)
 
 for _, server in pairs(servers) do
 	local opts = {
