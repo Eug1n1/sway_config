@@ -1,0 +1,55 @@
+# output * bg ../wallpapers/eddie-mendoza-information-age.jpg stretch
+
+# Set inner/outer gaps
+default_border pixel 2
+gaps inner 7
+gaps outer 5
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+# smart_gaps on
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# smart_borders on
+
+# Hide Title Bars
+for_window [app_id="^.*"] opacit 1
+default_border pixel 2
+titlebar_border_thickness 2
+# default_floating_border pixel 2
+# hide_edge_borders smart
+
+
+set $fg0 #fbf1c7
+set $fg1 #ebdbb2
+set $fg2 #d5c4a1
+set $fg3 #bdae94
+set $fg4 #a89984
+set $rd_drk #cc241d
+set $rd #fb4934
+set $orng_drk #d65d0e
+set $orng #fe8019
+set $grn_drk #98971a
+set $grn #b8bb26
+set $yllw_drk #d79921
+set $yllw #fabd2f
+set $bl_drk #458588
+set $bl #83a598
+set $prpl_drk #b16286
+set $prpl #d3869b
+set $aq_drk #689d6a
+set $aq #8ec07c
+set $bg0_h #1d2021
+set $bg0_s #32302f
+set $bg0 #282828
+set $bg1 #3c3836
+set $bg2 #504945
+set $bg3 #665c54
+set $bg4 #7c6f64
+set $gr #a89984
+set $gr_drk #928374
+
+#                       <border>    <background>    <text>  <indicator> <child_border>
+client.focused          $fg1        $bg0            $fg1    $orng       $fg1       
+client.focused_inactive $bg2        $bg0_h          $fg2    $orng       $bg2
+client.unfocused        $bg2        $bg0_h          $fg2    $orng       $bg2
+client.urgent           $orng_drk   $bg0_h          $fg1    $orng       $orng_drk

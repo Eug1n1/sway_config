@@ -1,0 +1,128 @@
+{ 
+    "layer": "top",
+	"position": "top",
+    "output": ["eDP-1"],
+    "ipc": true,
+    "bar_id": "bar-0",
+
+	"modules-left": [
+		"sway/workspaces",
+        "custom/right-arrow-light-padding",
+		"sway/window"
+	],
+
+	"modules-center": [
+        "custom/left-arrow-light",
+		"clock",
+        "custom/right-arrow-light"
+	],
+
+	"modules-right": [
+		"sway/mode",
+        "tray",
+        "custom/left-arrow-light",
+        "sway/language",
+        "custom/left-arrow-dark",
+        "pulseaudio",
+        "custom/left-arrow-light",
+        "backlight",
+        "custom/left-arrow-dark",
+        "network",
+        "custom/left-arrow-light",
+        "battery"
+	],
+
+	"battery": {
+		"interval": 10,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}  ({capacity:3}%)",
+		"format-icons": ["", "", "", "", ""],
+	},
+
+	"clock": {
+		"interval": 10,
+		"format": "{:%a %b %d - %I:%M %p}",
+		"tooltip": false
+	},
+
+	"sway/language": {
+		"format": "{}",
+		"min-length": 5,
+		"tooltip": false
+	},
+
+	"network": {
+		"interval": 10,
+		"format-wifi": "  {essid}",
+		"format-ethernet": "  {ifname}: {ipaddr}",
+		"format-disconnected": "睊",
+        "tooltip": true,
+		"tooltip-format": "{essid}({signalStrength}%): {ipaddr}",
+		"on-click": "cmst"
+	},
+
+    "sway/mode": {
+        "format": "{}",
+        "max-length": 50
+    },
+
+	"sway/window": {
+		"format": "{}",
+		"max-length": 30,
+		"tooltip": false
+	},
+
+	"sway/workspaces": {
+		"all-outputs": true,
+		"disable-scroll": true,
+		"format": "{name}",
+	},
+
+	"pulseaudio": {
+		"scroll-step": 5,
+		"format": "{icon} ({volume:>3}%)",
+		"format-bluetooth": "{desc} ({volume:3}%) ",
+		"format-muted": "婢",
+		"format-icons": {
+			"default": ["奄", "奔", "墳"]
+		},
+		"on-click": "pavucontrol"
+	},
+
+    "backlight": {
+        "format": "{icon} ({percent:>3}%)",
+        "format-icons": [ "", "" ]
+    },
+
+	"tray": {
+		"icon-size": 21
+	},
+
+    "custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+    
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+    
+    "custom/right-arrow-light-padding": {
+		"format": "",
+		"tooltip": false
+    }
+}
