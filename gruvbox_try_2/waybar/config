@@ -45,6 +45,7 @@
 	"clock": {
 		"interval": 10,
 		"format": "{:%a %b %d - %I:%M %p}",
+        "on-click": "kitty --class=calcurse -e calcurse",
 		"tooltip": false
 	},
 
@@ -61,7 +62,7 @@
 		"format-disconnected": "睊",
         "tooltip": true,
 		"tooltip-format": "{essid}({signalStrength}%): {ipaddr}",
-		"on-click": "cmst"
+		"on-click": "kitty --class=nmtui -e nmtui"
 	},
 
     "sway/mode": {
@@ -85,7 +86,7 @@
 		"scroll-step": 5,
 		"format": "{icon} ({volume:>3}%)",
 		"format-bluetooth": "{desc} ({volume:3}%) ",
-		"format-muted": "婢",
+		"format-muted": "{icon:4} MUTE",
 		"format-icons": {
 			"default": ["奄", "奔", "墳"]
 		},

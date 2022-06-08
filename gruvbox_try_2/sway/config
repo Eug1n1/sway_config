@@ -4,6 +4,8 @@ set $down j
 set $up k
 set $right l
 
+
+set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 set $term kitty
 
 # xwayland disabled
@@ -21,6 +23,7 @@ exec_always {
 exec {
     gammastep -l 53.9:27.56 -O 5000
     mako
+    rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 }
 
 bar {
@@ -28,8 +31,6 @@ bar {
 }
 
 
-set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -a bottom
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 

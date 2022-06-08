@@ -10,6 +10,12 @@
 	}
 }
 
+@keyframes battery_charging {
+	to {
+		color: @grn_drk
+	}
+}
+
 @define-color fg0 #fbf1c7;
 @define-color fg1 #ebdbb2;
 @define-color fg2 #d5c4a1;
@@ -87,6 +93,7 @@ window#waybar {
 
 #workspaces {
     background: @background_light;
+    padding: 0px 10px 0px 0px;
 }
 
 #workspaces button {
@@ -119,12 +126,21 @@ window#waybar {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-fill-mode: both;
 }
 
 #battery.warning:not(.charging),
 #battery.discharging.warning {
     animation-name: battery_warning;
     animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.charging {
+    animation-duration: 2s;
+    animation-name: battery_charging;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
