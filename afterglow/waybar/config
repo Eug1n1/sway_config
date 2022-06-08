@@ -63,7 +63,8 @@
     },
 
     "clock": {
-        "format": "{:%a, %b %d %I:%M %p}"
+        "format": "{:%a, %b %d %I:%M %p}",
+        "on-click": "kitty --class=calcurse -e calcurse"
     },
 
     "battery": {
@@ -78,8 +79,8 @@
     },
 
     "network": {
-        "format-wifi": "WIFI {essid}",
-        "format-ethernet": "INET {ifname}",
+        "format-wifi": "WIFI {ipaddr}",
+        "format-ethernet": "{ifname} ({ipaddr})",
         "format-disconnected": "NO INTERNET",
         "on-click": "nm-connection-editor"
     },
