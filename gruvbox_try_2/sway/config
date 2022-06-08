@@ -1,0 +1,41 @@
+set $mod Mod1
+set $left h
+set $down j
+set $up k
+set $right l
+
+set $term kitty
+
+# xwayland disabled
+
+floating_modifier $mod normal
+
+set $menu dmenu_path | wofi --show drun -I | xargs swaymsg exec --
+
+font pango:JetBrainsMonoNerdFont 12
+
+exec_always {
+    --no-startup-id autotiling
+}
+
+exec {
+    gammastep -l 53.9:27.56 -O 5000
+    mako
+}
+
+bar {
+	swaybar_command waybar
+}
+
+
+set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -a bottom
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+
+output "*" background "~/.config/wallpaper.png" fill
+
+include /etc/sway/config.d/*
+include /home/eug1n1/.config/sway/config.d/*
+
+include ~/.config/sway/themes/gruvbox_v2

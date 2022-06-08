@@ -1,0 +1,39 @@
+# output * bg ../wallpapers/eddie-mendoza-information-age.jpg stretch
+
+#
+# Color definition
+#
+
+set $fg #ebdbb2
+set $fg_dimmed #a89984
+set $bg #282828
+set $border #bdae93
+set $urgent #cc241d
+set $border_dimmed #504945
+set $indicator #d79921
+
+#
+# Appearance:
+#
+
+# Set inner/outer gaps
+default_border pixel 2
+gaps inner 7
+gaps outer 5
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+# smart_gaps on
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# smart_borders on
+
+# Hide Title Bars
+for_window [app_id="^.*"] opacity 1
+# default_border pixel 1 
+# default_floating_border pixel 2
+# hide_edge_borders smart
+
+client.focused $border $bg $fg $indicator $border
+client.urgent $urgent $bg $fg $indicator $urgent
+client.unfocused $border_dimmed $bg $fg_dimmed $indicator $border_dimmed
+client.focused_inactive $border_dimmed $bg $fg_dimmed $indicator $border_dimmed
