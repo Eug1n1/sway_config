@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["alpha-nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\alpha-nvim",
-    url = "https://github.com/goolord/alpha-nvim"
-  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
@@ -129,15 +124,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gitsigns.nvim"] = {
+  gruvbox = {
     loaded = true,
-    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
-    url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
+    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
   },
   ["hop.nvim"] = {
     loaded = true,
@@ -204,11 +194,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-notify"] = {
-    loaded = true,
-    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-notify",
-    url = "https://github.com/rcarriga/nvim-notify"
-  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
@@ -223,11 +208,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["nvim-ts-context-commentstring"] = {
-    loaded = true,
-    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-context-commentstring",
-    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -249,40 +229,15 @@ _G.packer_plugins = {
     path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
-  ["project.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\project.nvim",
-    url = "https://github.com/ahmedkhalf/project.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["todo-comments.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\todo-comments.nvim",
-    url = "https://github.com/folke/todo-comments.nvim"
-  },
-  ["toggleterm.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
-    url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["vim-bbye"] = {
-    loaded = true,
-    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-bbye",
-    url = "https://github.com/moll/vim-bbye"
-  },
   ["vim-slash"] = {
     loaded = true,
     path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-slash",
     url = "https://github.com/junegunn/vim-slash"
-  },
-  ["which-key.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\eug1n1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\which-key.nvim",
-    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

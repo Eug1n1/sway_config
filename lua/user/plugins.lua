@@ -1,4 +1,5 @@
 local fn = vim.fn
+
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -39,24 +40,31 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-
-    use('wbthomason/packer.nvim')
-    use("nvim-lualine/lualine.nvim")
-    use("phaazon/hop.nvim")
-    use("Shatur/neovim-ayu")
-    use("windwp/nvim-autopairs")
-    use("nvim-treesitter/nvim-treesitter")
-    use("nvim-lua/plenary.nvim")
-    use("nvim-lua/popup.nvim")
-    use("kyazdani42/nvim-tree.lua")
-    use("kyazdani42/nvim-web-devicons")
+	-- My plugins here
+	use("wbthomason/packer.nvim") -- Have packer manage itself
+	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
+	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
+	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
     use("b3nj5m1n/kommentary")
-    use("akinsho/bufferline.nvim")
+	use("kyazdani42/nvim-web-devicons")
+	use("kyazdani42/nvim-tree.lua")
+	use("akinsho/bufferline.nvim")
+	use("nvim-lualine/lualine.nvim")
+	use("lewis6991/impatient.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
+	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
     use("junegunn/vim-slash")
-    use("ellisonleao/gruvbox.nvim")
 
-    use("fgheng/winbar.nvim")
-    use("SmiteshP/nvim-navic")
+	use("phaazon/hop.nvim")
+	use("mfussenegger/nvim-treehopper")
+
+	-- Colorschemes
+	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+	use("lunarvim/darkplus.nvim")
+	use("morhetz/gruvbox")
+    use("Shatur/neovim-ayu")
+
+    use("norcalli/nvim-colorizer.lua")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -70,11 +78,23 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
-    use("neovim/nvim-lspconfig") -- enable LSP
+	-- LSP
+	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
+	-- Telescope
+	use("nvim-telescope/telescope.nvim")
+
+	-- Treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	})
+
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

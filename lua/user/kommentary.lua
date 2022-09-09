@@ -1,5 +1,6 @@
 local status_ok, kommentary = pcall(require, "kommentary.config")
 if not status_ok then
+    print("kommentary")
   return
 end
 
