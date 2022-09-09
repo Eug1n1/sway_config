@@ -17,10 +17,15 @@ local keymap = vim.api.nvim_set_keymap
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
+-- keymap("", "jj", "<Nop>", opts)
+-- keymap("", "hh", "<Nop>", opts)
+-- keymap("", "kk", "<Nop>", opts)
+-- keymap("", "ll", "<Nop>", opts)
 
 -- Normal --
 keymap("n", "tt", ":NvimTreeToggle<cr>", opts)
-
+keymap('n', '<F2>', '<cmd>lua require("renamer").rename()<cr>', opts)
+keymap('n', 'rn', '<cmd>lua require("renamer").rename()<cr>', opts)
 -- Hop
 keymap("n", "hw", ":lua require'hop'.hint_words()<cr>", opts)
 keymap("n", "hl", ":lua require'hop'.hint_lines_skip_whitespace()<cr>", opts)
