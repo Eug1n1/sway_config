@@ -23,9 +23,11 @@ local keymap = vim.api.nvim_set_keymap
 -- keymap("", "ll", "<Nop>", opts)
 
 -- Normal --
+keymap("n", "mp", "<Plug>MarkdownPreviewToggle", opts)
+
 keymap("n", "tt", ":NvimTreeToggle<cr>", opts)
 keymap('n', '<F2>', '<cmd>lua require("renamer").rename()<cr>', opts)
-keymap('n', 'rn', '<cmd>lua require("renamer").rename()<cr>', opts)
+-- keymap('n', 'rn', '<cmd>lua require("renamer").rename()<cr>', opts)
 -- Hop
 keymap("n", "hw", ":lua require'hop'.hint_words()<cr>", opts)
 keymap("n", "hl", ":lua require'hop'.hint_lines_skip_whitespace()<cr>", opts)
@@ -69,7 +71,7 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
-keymap("n", "cic", "<Plug>kommentary_line_default", opts)
-keymap("n", "ci", "<Plug>kommentary_motion_default", opts)
-keymap("x", "ci", "<Plug>kommentary_visual_default", opts)
+keymap("n", "gig", "<Plug>kommentary_line_default", opts)
+keymap("n", "gi", "<Plug>kommentary_motion_default", opts)
+keymap("x", "gi", "<Plug>kommentary_visual_default", opts)
 

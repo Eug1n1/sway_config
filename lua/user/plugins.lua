@@ -58,7 +58,8 @@ return packer.startup(function(use)
     use("filipdutescu/renamer.nvim")
     use("tversteeg/registers.nvim")
     use("folke/todo-comments.nvim")
-
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+    
 	use("phaazon/hop.nvim")
 	use("mfussenegger/nvim-treehopper")
 
