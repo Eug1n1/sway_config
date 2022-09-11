@@ -36,29 +36,29 @@ local location = {
 }
 
 local filename = {
-    'filename',
-    file_status = true,      -- Displays file status (readonly status, modified status)
-    path = 1,                -- 0: Just the filename
-                           -- 1: Relative path
-                           -- 2: Absolute path
-                           -- 3: Absolute path, with tilde as the home directory
+	"filename",
+	file_status = true, -- Displays file status (readonly status, modified status)
+	path = 1, -- 0: Just the filename
+	-- 1: Relative path
+	-- 2: Absolute path
+	-- 3: Absolute path, with tilde as the home directory
 
-    shorting_target = 40,    -- Shortens path to leave 40 spaces in the window
-                           -- for other components. (terrible name, any suggestions?)
-    symbols = {
-        modified = '[+]',      -- Text to show when the file is modified.
-        readonly = '[-]',      -- Text to show when the file is non-modifiable or readonly.
-        unnamed = '[No Name]', -- Text to show for unnamed buffers.
-    }
+	shorting_target = 40, -- Shortens path to leave 40 spaces in the window
+	-- for other components. (terrible name, any suggestions?)
+	symbols = {
+		modified = "[+]", -- Text to show when the file is modified.
+		readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
+		unnamed = "[No Name]", -- Text to show for unnamed buffers.
+	},
 }
 
 local filetype = {
-    'filetype',
-    colored = false,   -- Displays filetype icon in color if set to true
-    icon_only = false, -- Display only an icon for filetype
-    icon = { align = 'left' }, -- Display filetype icon on the right hand side
-    -- icon =    {'X', align='right'}
-    -- Icon string ^ in table is ignored in filetype component
+	"filetype",
+	colored = false, -- Displays filetype icon in color if set to true
+	icon_only = false, -- Display only an icon for filetype
+	icon = { align = "left" }, -- Display filetype icon on the right hand side
+	-- icon =    {'X', align='right'}
+	-- Icon string ^ in table is ignored in filetype component
 }
 
 local spaces = function()
@@ -69,7 +69,7 @@ lualine.setup({
 	options = {
 		icons_enabled = true,
 		-- theme = "auto",
-        theme = "ayu",
+		theme = "ayu",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
@@ -80,7 +80,7 @@ lualine.setup({
 		lualine_b = { mode },
 		lualine_c = { filename },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_y = { },
+		lualine_y = {},
 		lualine_x = { spaces, "encoding", filetype },
 		lualine_z = { "location" },
 	},
