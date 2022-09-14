@@ -44,7 +44,7 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
-    use("b3nj5m1n/kommentary")
+	use("b3nj5m1n/kommentary")
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
@@ -52,23 +52,30 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
-    use("junegunn/vim-slash")
-    use("SmiteshP/nvim-navic")
-    use("RRethy/vim-illuminate")
-    use("filipdutescu/renamer.nvim")
-    use("tversteeg/registers.nvim")
-    use("folke/todo-comments.nvim")
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-    
+	use("junegunn/vim-slash")
+	use("SmiteshP/nvim-navic")
+	use("RRethy/vim-illuminate")
+	use("filipdutescu/renamer.nvim")
+	use("tversteeg/registers.nvim")
+	use("folke/todo-comments.nvim")
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
+
 	use("phaazon/hop.nvim")
 	use("mfussenegger/nvim-treehopper")
 
 	-- Colorschemes
 	use("lunarvim/darkplus.nvim")
 	use("morhetz/gruvbox")
-    use("Shatur/neovim-ayu")
+	use("Shatur/neovim-ayu")
 
-    use("norcalli/nvim-colorizer.lua")
+	use("norcalli/nvim-colorizer.lua")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -84,7 +91,9 @@ return packer.startup(function(use)
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- enable LSP
-	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
+	-- use("williamboman/nvim-lsp-installer") -- simple to use language server installer
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 

@@ -19,4 +19,4 @@ require "user.keymaps"
 require "user.illuminate"
 require "user.renamer"
 require "user.todo-comments"
-
+require "user.mason"
