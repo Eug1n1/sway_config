@@ -15,7 +15,6 @@ local servers = {
 	"jdtls",
 	"jsonls",
 	"sumneko_lua",
-	"tsserver",
 	"pyright",
 	"yamlls",
 	"bashls",
@@ -25,6 +24,7 @@ local servers = {
 	"lemminx",
 	"prettier",
 	"stylua",
+    "tsserver"
 }
 
 local settings = {
