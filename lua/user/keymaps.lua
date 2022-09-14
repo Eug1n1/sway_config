@@ -73,5 +73,4 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 keymap("n", "cic", "<Plug>kommentary_line_default", opts)
-keymap("n", "ci", "<Plug>kommentary_motion_default", opts)
 keymap("x", "ci", "<Plug>kommentary_visual_default", opts)

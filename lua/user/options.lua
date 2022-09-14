@@ -32,7 +32,7 @@ local options = {
 	wrap = false, -- display lines as one long line
 	scrolloff = 8, -- is one of my fav
 	sidescrolloff = 8,
-	guifont = "JetBrainsMonoNerdFont:h13", -- the font used in graphical neovim applications
+	-- guifont = "JetBrainsMono Nerd Font:h13", -- the font used in graphical neovim applications
 	colorcolumn = "80",
 }
 
