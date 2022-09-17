@@ -66,6 +66,9 @@ return packer.startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
+    use("lvimuser/lsp-inlayhints.nvim")
+    use("folke/lua-dev.nvim")
+    use("simrat39/rust-tools.nvim")
 
 	use("phaazon/hop.nvim")
 	use("mfussenegger/nvim-treehopper")
@@ -84,6 +87,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp")
+    use "ray-x/lsp_signature.nvim"
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine

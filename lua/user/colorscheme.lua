@@ -5,7 +5,8 @@
 
 vim.cmd([[
 try
-  colorscheme darkplus
+  colorscheme gruvbox
+  set background=light
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark

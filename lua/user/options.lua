@@ -44,4 +44,16 @@ end
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
-vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
+vim.diagnostic.config({
+  virtual_text = true,
+  severity_sort = true,
+  update_in_insert = true,
+  float = {
+    border = 'rounded',
+    source = 'always',
+    header = '',
+    prefix = '',
+  },
+})
+
+-- vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
