@@ -59,7 +59,7 @@
         "format-wifi": "",
         "format-ethernet": "",
         "format-disconnected": "睊",
-        "on-click": "kitty --class=nmtui -e nmtui"
+        "on-click": "kitty --class=nmtui -e nmtui-connect"
     },
 
     "pulseaudio": {
