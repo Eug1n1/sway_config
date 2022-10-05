@@ -77,6 +77,7 @@ return packer.startup(function(use)
 	use("lunarvim/darkplus.nvim")
 	use("morhetz/gruvbox")
 	use("Shatur/neovim-ayu")
+    use('folke/tokyonight.nvim')
 
 	use("norcalli/nvim-colorizer.lua")
 

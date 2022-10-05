@@ -30,9 +30,9 @@ keymap("n", "tt", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<F2>", '<cmd>lua require("renamer").rename()<cr>', opts)
 -- keymap('n', 'rn', '<cmd>lua require("renamer").rename()<cr>', opts)
 -- Hop
-keymap("n", "hw", ":lua require'hop'.hint_words()<cr>", opts)
-keymap("n", "hl", ":lua require'hop'.hint_lines_skip_whitespace()<cr>", opts)
-keymap("n", "hc", ":lua require'hop'.hint_char1()<cr>", opts)
+keymap("n", "<space>w", ":lua require'hop'.hint_words()<cr>", opts)
+keymap("n", "<space>l", ":lua require'hop'.hint_lines_skip_whitespace()<cr>", opts)
+keymap("n", "<space>c", ":lua require'hop'.hint_char1()<cr>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
