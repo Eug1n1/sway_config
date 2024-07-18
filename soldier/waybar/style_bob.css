@@ -1,0 +1,142 @@
+* {
+    border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Liberation Mono;
+    font-weight: bold;
+    /* font-family: CaskaydiaCoveNerdFont; */
+    min-height: 20px;
+    font-size: 11pt;
+    color: #fafafa;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces {
+    background-color: #2a2a2a;
+    border-radius: 0.6rem;
+    padding: .3rem;
+}
+
+#workspaces button {
+    background-color: #2a2a2a;
+    border-radius: 0.6rem;
+    padding: .3rem;
+}
+
+#workspaces button:hover {
+    border-radius: 0.6rem;
+    background: #2a2a2a;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.focused {
+    border-bottom: 2px solid #fafafa;
+    border-left: 0.5px solid #fafafa;
+    border-right: 2px solid #1a1a1a;
+    border-radius: 0.6rem;
+    background-color: #3a3a3a;
+}
+
+#workspaces button.active {
+    border-bottom: 2px solid #fafafa;
+    border-left: 0.5px solid #fafafa;
+    border-right: 2px solid #1a1a1a;
+    border-radius: 0.6rem;
+    background-color: #3a3a3a;
+}
+
+#workspaces button.urgent {
+    animation-name: workspaces_urgent;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 0.6rem;
+}
+
+@keyframes workspaces_urgent {
+    to {
+        border-bottom: 2px solid #f5594e;
+        border-left: 0.5px solid #f5594e;
+        border-right: 2px solid #360505;
+        background-color: #ad2121;
+    }
+}
+
+#workspaces button.focused:hover {
+    background-color: #3a3a3a;
+}
+
+#workspaces button.active:hover {
+    background-color: #3a3a3a;
+}
+
+.modules-left {
+    background-color: #2a2a2a;
+    border-radius: 0.6rem;
+    margin-left: 1rem;
+    padding: .3rem;
+}
+
+.modules-right {
+    background-color: #2a2a2a;
+    border-radius: 0.6rem;
+    margin-right: 1rem;
+    padding: .3rem;
+}
+
+#language,
+#tray,
+#pulseaudio,
+#battery,
+#clock {
+    padding: 0rem .7rem;
+    background-color: #3a3a3a;
+    border-bottom: 2px solid #fafafa;
+    border-right: 2px solid #1a1a1a;
+    border-left: 0.5px solid #fafafa;
+    border-radius: .6rem;
+}
+
+#mode,
+#network,
+#custom-power {
+    padding: 0rem .7rem;
+    background-color: #3a3a3a;
+    border-bottom: 2px solid #fafafa;
+    border-right: 2px solid #1a1a1a;
+    border-left: 0.5px solid #fafafa;
+    border-radius: .6rem;
+}
+
+#custom-power {
+    padding: 0rem 1rem 0rem .7rem;
+}
+
+#custom-power button:hover {
+    background-color: #3a3a3a;
+}
+
+#language,
+#custom-power,
+#custom-lang,
+#tray,
+#pulseaudio,
+#battery {
+    margin-right: .5rem;
+}
+
+#mode {
+    margin-left: .5rem;
+}
+
+@keyframes blink {
+    to {
+        background-color: #fafafa;
+        color: #000000;
+    }
+}

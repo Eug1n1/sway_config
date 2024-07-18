@@ -1,0 +1,177 @@
+/* @define-color light_bd #fafafa;
+@define-color dark_bd #1a1a1a;
+@define-color bg #333333;
+@define-color bg_hov #444444;
+@define-color fg @light_bd; */
+
+/* obsidian colors */
+@define-color light_bd #DADADA;
+@define-color dark_bd #0a0a0a;
+@define-color bg #1E1E1E;
+@define-color bg_hov #262626;
+@define-color fg @light_bd;
+
+* {
+    border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: LiterationMonoNerdFont;
+    font-weight: bold;
+    /* font-family: CaskaydiaCoveNerdFont; */
+    min-height: 20px;
+    font-size: 11pt;
+    color: @fg;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces {
+    background-color: @bg;
+    border-radius: 0.6rem;
+    padding: 0.3rem;
+}
+
+#workspaces button {
+    background-color: @bg;
+    border-radius: 0.6rem;
+    padding: 0.4rem 0.8rem;
+}
+
+#workspaces button:hover {
+    border-radius: 0.6rem;
+    background: @bg;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.focused {
+    border-bottom: 2px solid @light_bd;
+    border-left: 0.5px solid @light_bd;
+    border-right: 2px solid @dark_bd;
+    border-radius: 0.6rem;
+    background-color: @bg_hov;
+}
+
+#workspaces button.active {
+    border-bottom: 2px solid @light_bd;
+    border-left: 0.5px solid @light_bd;
+    border-right: 2px solid @dark_bd;
+    border-radius: 0.6rem;
+    background-color: @bg_hov;
+}
+
+#workspaces button.urgent {
+    animation-name: workspaces_urgent;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 0.6rem;
+}
+
+@keyframes workspaces_urgent {
+    to {
+        border-bottom: 2px solid #f5594e;
+        border-left: 0.5px solid #f5594e;
+        border-right: 2px solid #360505;
+        background-color: #ad2121;
+    }
+}
+
+#workspaces button.focused:hover {
+    background-color: @bg_hov;
+}
+
+#workspaces button.active:hover {
+    background-color: @bg_hov;
+}
+
+.modules-left {
+    background-color: @bg;
+    border-radius: 0.6rem;
+    margin-left: 1rem;
+    padding: 0.3rem;
+}
+
+.modules-right {
+    background-color: @bg;
+    border-radius: 0.6rem;
+    margin-right: 1rem;
+    padding: 0.3rem;
+}
+
+#language,
+#tray,
+#pulseaudio,
+#battery,
+#clock {
+    padding: 0rem 0.7rem;
+    background-color: @bg_hov;
+    border-bottom: 2px solid @light_bd;
+    border-right: 2px solid @dark_bd;
+    border-left: 0.5px solid @light_bd;
+    border-radius: 0.6rem;
+}
+
+#mode,
+#network,
+#custom-power {
+    padding: 0rem 0.7rem;
+    background-color: @bg_hov;
+    border-bottom: 2px solid @light_bd;
+    border-right: 2px solid @dark_bd;
+    border-left: 0.5px solid @light_bd;
+    border-radius: 0.6rem;
+}
+
+#pulseaudio:hover,
+#custom-power:hover,
+#network:hover {
+    background: @bg_hov;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+tooltip {
+    background: @bg;
+    border-bottom: 2px solid @light_bd;
+    border-right: 2px solid @dark_bd;
+    border-left: 0.5px solid @light_bd;
+    border-radius: 0.6rem;
+}
+
+tooltip label {
+    color: @fg;
+}
+
+
+#network.disconnected,
+#custom-power {
+    padding: 0rem 1.1rem 0rem 0.8rem;
+}
+
+#custom-power button:hover {
+    background-color: @bg_hov;
+}
+
+#language,
+#custom-power,
+#custom-lang,
+#tray,
+#pulseaudio,
+#battery {
+    margin-right: 0.5rem;
+}
+
+#mode {
+    margin-left: 0.5rem;
+}
+
+@keyframes blink {
+    to {
+        background-color: @light_bd;
+        color: #000000;
+    }
+}

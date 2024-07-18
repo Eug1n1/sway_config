@@ -1,0 +1,29 @@
+screenshots
+effect-blur=10x10
+effect-greyscale
+
+hide-cancel
+
+indicator-radius=80
+indicator-thickness=7
+
+ring-color=555555
+line-color=00000000
+text-color=555555
+inside-color=242424
+
+ring-selection-color=eeeeee
+line-selection-color=00000000
+text-selection-color=eeeeee
+inside-selection-color=242424
+
+lock-command=swaylock
+poweroff-command=systemctl poweroff
+reboot-command=systemctl reboot
+suspend-command=systemctl suspend
+hibernate-command=systemctl suspend
+logout-command=hyprctl dispatch exit none
+
+scroll-sensitivity=1
+
+fade-in=0.1
