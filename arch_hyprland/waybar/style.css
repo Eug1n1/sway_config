@@ -1,0 +1,199 @@
+@define-color bg #3D3D3D;
+@define-color second_layer_bg #272727;
+@define-color dark_bg #1F1F1F;
+@define-color hover #c9c388;
+@define-color fg #f4f4f4;
+@define-color power #870101;
+
+/*@define-color bg #30353a;*/
+/*@define-color second_layer_bg #26292d;*/
+/*@define-color dark_bg #24292E;*/
+/*@define-color hover #c9c388;*/
+/*@define-color fg #f4f4f4;*/
+/*@define-color power #870101;*/
+
+* {
+    all: unset;
+    font-weight: bold;
+    font-size: 10pt;
+    /*font-family: Ubuntu Nerd Font;*/
+    /*font-family: VictorMono Nerd Font Propo;*/
+    /*font-family: ZedMono Nerd Font Propo;*/
+    font-family: RobotoMono Nerd Font Propo;
+    border-radius: .4rem;
+    padding: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+tooltip {
+    background-color: @dark_bg;
+}
+
+/*--------------------------------------------------------*/
+/*                       LEFT                             */
+/*--------------------------------------------------------*/
+.modules-left {
+    background-color: @dark_bg;
+    padding: .3rem;
+    margin-right: .3rem;
+}
+
+#tray menu {
+    background-color: @dark_bg;
+    padding: .3rem;
+}
+
+#tray menu menuitem {
+    background-color: @bg;
+    padding: .4rem .8rem;
+}
+
+#tray menu > menuitem:not(:first-child) {
+    margin-top: .4rem;
+}
+
+#tray menu menuitem:hover {
+    background-color: @hover;
+    color: @bg;
+}
+
+#custom-stats,
+#tray,
+#custom-logo {
+    background-color: @bg;
+    padding: .4rem .8rem;
+}
+
+#disk,
+#network,
+#temperature,
+#memory,
+#cpu,
+#custom-lock,
+#custom-sleep,
+#custom-reboot,
+#custom-quit,
+#custom-power {
+    padding: .4rem .8rem;
+    border: 1px solid @dark_bg;
+    background-color: @second_layer_bg;
+}
+
+#disk:hover,
+#network:hover,
+#temperature:hover,
+#memory:hover,
+#cpu:hover,
+#custom-lock:hover,
+#custom-sleep:hover,
+#custom-reboot:hover,
+#custom-quit:hover,
+#custom-power:hover {
+    border: 1px solid @hover;
+}
+
+#custom-stats,
+#tray,
+#disk,
+#network,
+#temperature,
+#memory,
+#cpu,
+#custom-power,
+#custom-sleep,
+#custom-lock,
+#custom-reboot,
+#custom-quit {
+    margin-left: .3rem;
+}
+
+#custom-stats:hover,
+#custom-logo:hover {
+    background-color: @hover;
+    color: @dark_bg;
+}
+/*--------------------------------------------------------*/
+/*                       CENTER                           */
+/*--------------------------------------------------------*/
+#workspaces {
+    background-color: @dark_bg;
+    padding: .3rem;
+}
+
+#workspaces button {
+    background-color: @bg;
+    padding: .4rem .8rem;
+}
+
+#workspaces > button:not(:first-child) {
+    margin-left: .4rem;
+}
+
+#workspaces button:hover {
+    background-color: @hover;
+    color: @dark_bg;
+}
+
+#workspaces button.active {
+    background-color: @hover;
+    color: @dark_bg;
+}
+
+/*--------------------------------------------------------*/
+/*                    RIGHT                               */
+/*--------------------------------------------------------*/
+.modules-right {
+    background-color: @dark_bg;
+    padding: .3rem;
+    margin-left: .3rem;
+}
+
+#custom-volume,
+#language,
+#battery,
+#clock {
+    padding: .4rem .8rem;
+    background-color: @bg;
+}
+
+#custom-volume:hover,
+#language:hover,
+#battery:hover,
+#clock:hover {
+    background-color: @hover;
+    color: @dark_bg;
+}
+
+#custom-volume,
+#pulseaudio-slider,
+#language,
+#battery {
+    margin-right: .4rem;
+}
+
+#pulseaudio-slider{
+    padding: .4rem .8rem;
+    background-color: @second_layer_bg;
+}
+
+#pulseaudio-slider slider:hover {
+    border: 1px solid @hover;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+}
+#pulseaudio-slider trough {
+    min-height: 1rem;
+    min-width: 7rem;
+    background-color: @dark_bg;
+}
+#pulseaudio-slider highlight {
+    min-width: .5rem;
+    background-color: @hover;
+}
